@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Features;
+
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 
