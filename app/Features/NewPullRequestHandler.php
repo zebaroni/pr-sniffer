@@ -21,7 +21,7 @@ class NewPullRequestHandler
         $res = Http::get("https://api.github.com/repos/{$repoOwner}/{$repoName}/pulls/{$prNumber}/files");
         $json = $res->json();
 
-        // test
+
         Log::info($json);
     }
 }
