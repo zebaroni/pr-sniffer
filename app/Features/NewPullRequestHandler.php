@@ -36,8 +36,6 @@ class NewPullRequestHandler
     {
         $res = Http::get("https://api.github.com/repos/{$repoOwner}/{$repoName}/pulls/{$prNumber}/files");
         $json = $res->json();
-
-        Log::info($json);
     }
 
     private function getChangedFiles4(string $prNumber, string $repoName, string $repoOwner)
