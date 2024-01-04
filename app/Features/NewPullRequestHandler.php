@@ -9,6 +9,7 @@ class NewPullRequestHandler
 {
     public function handle(array $data): void
     {
+        //test
         $prNumber = $data["pull_request"]["number"];
         $repoName = $data["repository"]["name"];
         $repoOwner = $data["repository"]["owner"]["login"];
@@ -51,6 +52,5 @@ class NewPullRequestHandler
         $res = Http::get("https://api.github.com/repos/{$repoOwner}/{$repoName}/pulls/{$prNumber}/files");
         $json = $res->json();
 
-        Log::info($json);
     }
 }
